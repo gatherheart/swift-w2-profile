@@ -49,7 +49,7 @@
                                 <rect key="frame" x="192" y="711" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="onPressEditBtn:" destination="E66-mq-hi4" eventType="touchUpInside" id="JrX-pb-2Fv"/>
+                                    <action selector="onPressEditProfile:" destination="E66-mq-hi4" eventType="touchUpInside" id="JrX-pb-2Fv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-7w-PsA">
@@ -74,10 +74,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="4j5-Df-3rW"/>
                     <connections>
-                        <outlet property="editBtn" destination="ZBh-1L-WMd" id="tHb-R5-wHT"/>
-                        <outlet property="profileImg" destination="a5k-QR-479" id="XDg-rg-zMh"/>
-                        <outlet property="statusMsg" destination="E8H-7w-PsA" id="bpv-xb-MLD"/>
-                        <outlet property="userName" destination="LqI-E3-Xae" id="dL4-IV-vnE"/>
+                        <outlet property="avatar" destination="a5k-QR-479" id="XDg-rg-zMh"/>
+                        <outlet property="descriptionLabel" destination="E8H-7w-PsA" id="bpv-xb-MLD"/>
+                        <outlet property="editProfile" destination="ZBh-1L-WMd" id="tHb-R5-wHT"/>
+                        <outlet property="nameLabel" destination="LqI-E3-Xae" id="dL4-IV-vnE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwY-pj-VGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
