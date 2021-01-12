@@ -19,7 +19,7 @@ extension UIImage {
         }
     }
 }
-class ViewController: UIViewController{
+class FirstViewController: UIViewController{
     
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -31,18 +31,18 @@ class ViewController: UIViewController{
         toggle = !toggle
         
         if toggle {
-            self.userName.textColor = .blue
-            self.userName.backgroundColor = .yellow
-            self.userName.alpha = 0.5
-            self.statusMsg.text = "크루미션"
+            userName.textColor = .blue
+            userName.backgroundColor = .yellow
+            userName.alpha = 0.5
+            statusMsg.text = "크루미션"
         }
         else {
             userName.text = "Bean"
             userName.textColor = .white
             statusMsg.text = "Carpe diem!"
             statusMsg.textColor = .white
-            self.userName.alpha = 1
-            self.userName.backgroundColor = .none
+            userName.alpha = 1
+            userName.backgroundColor = .none
         }
     }
     
@@ -64,6 +64,10 @@ class ViewController: UIViewController{
         statusMsg.textColor = .white
         editBtn.tintColor = .white
         editBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: editBtn.frame.size.width, height: 0.3))
+        lineView.backgroundColor = .white
+        lineView.layer.opacity = 0.25
+        editBtn.addSubview(lineView)
     }
 
     required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }

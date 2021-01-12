@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="MAJ-lY-3YT">
             <objects>
-                <viewController id="y0G-lW-5uq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y0G-lW-5uq" customClass="SecondViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pR7-8L-Rtf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,33 +27,33 @@
         <!--Item 1-->
         <scene sceneID="BzN-Tz-K6W">
             <objects>
-                <viewController id="E66-mq-hi4" customClass="ViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E66-mq-hi4" customClass="FirstViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="D57-26-PjT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5k-QR-479">
-                                <rect key="frame" x="162" y="527" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5k-QR-479">
+                                <rect key="frame" x="157" y="486" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7uL-dx-6Uq"/>
+                                    <constraint firstAttribute="height" constant="100" id="QlN-6H-Kku"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqI-E3-Xae">
-                                <rect key="frame" x="20" y="638" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqI-E3-Xae">
+                                <rect key="frame" x="185" y="626" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-1L-WMd">
-                                <rect key="frame" x="20" y="711" width="374" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-1L-WMd">
+                                <rect key="frame" x="192" y="711" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="onPressEditBtn:" destination="E66-mq-hi4" eventType="touchUpInside" id="25Q-ne-FnP"/>
+                                    <action selector="onPressEditBtn:" destination="E66-mq-hi4" eventType="touchUpInside" id="JrX-pb-2Fv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-7w-PsA">
-                                <rect key="frame" x="20" y="667" width="374" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-7w-PsA">
+                                <rect key="frame" x="189.5" y="655" width="35.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,23 +61,33 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wtf-NS-hk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a5k-QR-479" firstAttribute="top" secondItem="Wtf-NS-hk6" secondAttribute="top" constant="442" id="0xN-i6-Lga"/>
+                            <constraint firstItem="LqI-E3-Xae" firstAttribute="centerX" secondItem="D57-26-PjT" secondAttribute="centerX" id="252-Ct-J5P"/>
+                            <constraint firstItem="ZBh-1L-WMd" firstAttribute="centerX" secondItem="D57-26-PjT" secondAttribute="centerX" id="61y-I6-iT3"/>
+                            <constraint firstItem="ZBh-1L-WMd" firstAttribute="top" secondItem="E8H-7w-PsA" secondAttribute="bottom" constant="39" id="MHq-Ve-1et"/>
+                            <constraint firstItem="LqI-E3-Xae" firstAttribute="top" secondItem="a5k-QR-479" secondAttribute="bottom" constant="40" id="QTt-1a-WDd"/>
+                            <constraint firstItem="E8H-7w-PsA" firstAttribute="centerX" secondItem="D57-26-PjT" secondAttribute="centerX" id="byv-sz-Ve0"/>
+                            <constraint firstItem="a5k-QR-479" firstAttribute="centerX" secondItem="D57-26-PjT" secondAttribute="centerX" id="quN-QB-81O"/>
+                            <constraint firstItem="E8H-7w-PsA" firstAttribute="top" secondItem="LqI-E3-Xae" secondAttribute="bottom" constant="8" symbolic="YES" id="ygd-Ur-3sd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="4j5-Df-3rW"/>
                     <connections>
-                        <outlet property="editBtn" destination="ZBh-1L-WMd" id="wdj-tw-l1D"/>
-                        <outlet property="profileImg" destination="a5k-QR-479" id="QHz-OU-zjI"/>
-                        <outlet property="statusMsg" destination="E8H-7w-PsA" id="Rpo-dg-6Hh"/>
-                        <outlet property="userName" destination="LqI-E3-Xae" id="rzL-mJ-PWe"/>
+                        <outlet property="editBtn" destination="ZBh-1L-WMd" id="tHb-R5-wHT"/>
+                        <outlet property="profileImg" destination="a5k-QR-479" id="XDg-rg-zMh"/>
+                        <outlet property="statusMsg" destination="E8H-7w-PsA" id="bpv-xb-MLD"/>
+                        <outlet property="userName" destination="LqI-E3-Xae" id="dL4-IV-vnE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwY-pj-VGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="85.714285714285708"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="dVe-yf-XeL">
             <objects>
-                <tabBarController id="7H3-vh-cws" sceneMemberID="viewController">
+                <tabBarController id="7H3-vh-cws" customClass="TabBarViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lrP-ml-bec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
