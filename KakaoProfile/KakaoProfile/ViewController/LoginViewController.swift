@@ -19,9 +19,9 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var editDescription: UITextField!
     
     public enum UIImagePickerControllerSourceType : Int {
-        case photoLibrary // 사진 앨범들
-        case camera // 카메라를 띄우는 타입
-        case savedPhotosAlbum // 특별한 순간
+        case photoLibrary
+        case camera
+        case savedPhotosAlbum
     }
     
     override func viewDidLoad() {

@@ -66,6 +66,7 @@
 		5D5CC43F25AC59C9002E35B5 /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				5D5CC47E25AEEE6C002E35B5 /* ViewController */,
 				5D5CC47925AEE659002E35B5 /* Assets */,
 				5D5CC46D25AE8E29002E35B5 /* Network */,
 				5D5CC44025AC59C9002E35B5 /* AppDelegate.swift */,
@@ -74,10 +75,6 @@
 				5D5CC44925AC59CC002E35B5 /* Assets.xcassets */,
 				5D5CC44B25AC59CC002E35B5 /* LaunchScreen.storyboard */,
 				5D5CC44E25AC59CC002E35B5 /* Info.plist */,
-				5D5CC45C25AD85A5002E35B5 /* TabBarController.swift */,
-				5D5CC46425AD8D78002E35B5 /* FirstViewController.swift */,
-				5D5CC46725AD91D3002E35B5 /* SecondViewController.swift */,
-				5D5CC47625AEA270002E35B5 /* LoginViewController.swift */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -104,6 +101,17 @@
 				5D5CC47B25AEE678002E35B5 /* bean.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		5D5CC47E25AEEE6C002E35B5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D5CC46425AD8D78002E35B5 /* FirstViewController.swift */,
+				5D5CC46725AD91D3002E35B5 /* SecondViewController.swift */,
+				5D5CC47625AEA270002E35B5 /* LoginViewController.swift */,
+				5D5CC45C25AD85A5002E35B5 /* TabBarController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
