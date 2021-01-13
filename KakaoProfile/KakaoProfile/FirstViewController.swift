@@ -6,20 +6,19 @@
 //
 
 import UIKit
+import Foundation
+
 
 class FirstViewController: UIViewController{
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var editProfile: UIButton!
+    @IBOutlet weak var editProfileButton: UIButton!
     var toggle: Bool = false
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.view.backgroundColor = .gray
         avatar.layer.cornerRadius = avatar.frame.height/3
@@ -27,17 +26,23 @@ class FirstViewController: UIViewController{
         nameLabel.textColor = .white
         descriptionLabel.text = "Carpe diem!"
         descriptionLabel.textColor = .white
-        editProfile.tintColor = .white
-        editProfile.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: editProfile.frame.size.width, height: 0.3))
+        editProfileButton.tintColor = .white
+        editProfileButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: editProfileButton.frame.size.width, height: 0.3))
         lineView.backgroundColor = .white
         lineView.layer.opacity = 0.25
-        editProfile.addSubview(lineView)
+        editProfileButton.addSubview(lineView)
+        
+        let imageUrlString = "https://avatars2.githubusercontent.com/u/40990613?s=460&u=931a32905f788ebe3b3dc3f58fc4c4069fbf0cc5&v=4"
+        guard let imageUrl:URL = URL(string: imageUrlString) else {
+            return
+        }
+
+        avatar.loadImage(withUrl: imageUrl)
     }
 
     @IBAction func onPressEditProfile(_ sender: Any) {
         toggle = !toggle
-        
         if toggle {
             nameLabel.textColor = .blue
             nameLabel.backgroundColor = .yellow
@@ -51,6 +56,14 @@ class FirstViewController: UIViewController{
             descriptionLabel.textColor = .white
             nameLabel.alpha = 1
             nameLabel.backgroundColor = .none
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? ""
+            destination.avatar = self.avatar
         }
     }
 }
