@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     private let imagePickerController = UIImagePickerController()
 
     @IBOutlet weak var editAvatar: UIButton!
+    @IBOutlet weak var cameraOnEditAvatar: UIImageView!
     @IBOutlet weak var editName: UITextField!
     @IBOutlet weak var editDescription: UITextField!
     
@@ -26,19 +27,31 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .gray
         if let image: UIImage = avatar?.image {
             editAvatar.setTitle("", for: .normal)
             editAvatar.layer.cornerRadius = editAvatar.frame.height/3
             editAvatar.setImage(image, for: .normal)
+            cameraOnEditAvatar.image = UIImage(systemName: "camera.circle.fill")
+            cameraOnEditAvatar.tintColor = .white
+            cameraOnEditAvatar.backgroundColor = .black
+            cameraOnEditAvatar.layer.cornerRadius = cameraOnEditAvatar.frame.height/2
         }
         imagePickerController.delegate = self
+        editName.clearButtonMode = .whileEditing
+        editDescription.clearButtonMode = .whileEditing
     }
+    
     
     @IBAction private func pickImage(_ sender: Any) {
         let type = UIImagePickerController.SourceType.photoLibrary
         guard UIImagePickerController.isSourceTypeAvailable(type) else { return }
         imagePickerController.sourceType = type
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true) { }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
