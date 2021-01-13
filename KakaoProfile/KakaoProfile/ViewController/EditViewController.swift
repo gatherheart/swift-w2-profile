@@ -36,6 +36,8 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
             cameraOnEditAvatar.tintColor = .white
             cameraOnEditAvatar.backgroundColor = .black
             cameraOnEditAvatar.layer.cornerRadius = cameraOnEditAvatar.frame.height/2
+            cameraOnEditAvatar.layer.borderWidth = 2
+            cameraOnEditAvatar.layer.borderColor = UIColor.white.cgColor
         }
         imagePickerController.delegate = self
         editName.clearButtonMode = .whileEditing
