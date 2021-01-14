@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class SecondViewController: UIViewController {
+class LoginViewController: UIViewController {
     override func viewDidLoad() {
-        self.view.backgroundColor = .orange
+        self.view.backgroundColor = UIColor(rgb: 0xFFE812)
     }
 }
