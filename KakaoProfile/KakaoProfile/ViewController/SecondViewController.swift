@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SecondViewController: UIViewController{
+class SecondViewController: UIViewController {
     override func viewDidLoad() {
         self.view.backgroundColor = .orange
     }

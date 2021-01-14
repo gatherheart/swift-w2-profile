@@ -16,7 +16,7 @@ class TabBarViewController: UITabBarController {
         guard let secondViewController = self.storyboard?.instantiateViewController(identifier: "SecondViewController") else { return }
         let icon1 = UITabBarItem(title: "profile", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle"))
         let icon2 = UITabBarItem(title: "login", image: UIImage(systemName: "character"), selectedImage: UIImage(systemName: "character"))
-        
+
         firstViewController.tabBarItem = icon1
         secondViewController.tabBarItem = icon2
 

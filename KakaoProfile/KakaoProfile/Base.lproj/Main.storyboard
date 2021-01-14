@@ -50,7 +50,7 @@
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="onPressEditProfile:" destination="E66-mq-hi4" eventType="touchUpInside" id="JrX-pb-2Fv"/>
-                                    <segue destination="mim-7u-P9x" kind="show" identifier="presentToLoginView" id="Tl9-9U-1b6"/>
+                                    <segue destination="mim-7u-P9x" kind="show" id="QN6-C7-07o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-7w-PsA">
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="85.714285714285708"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="wvn-kt-TQ4">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mim-7u-P9x" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mim-7u-P9x" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtZ-ke-wSc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="pickImage:" destination="mim-7u-P9x" eventType="touchUpInside" id="uQw-fP-21W"/>
+                                    <action selector="pickImage:" destination="mim-7u-P9x" eventType="touchUpInside" id="Qz4-rA-ckE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiX-bW-Gsy">
@@ -131,7 +131,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancel:" destination="mim-7u-P9x" eventType="touchUpInside" id="674-Bz-IiU"/>
+                                    <action selector="cancel:" destination="mim-7u-P9x" eventType="touchUpInside" id="PoO-55-7WS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrY-OS-NQG">
@@ -176,10 +176,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yp0-WS-kxQ"/>
                     <connections>
-                        <outlet property="cameraOnEditAvatar" destination="heS-c6-R7o" id="lul-RK-j1z"/>
-                        <outlet property="editAvatar" destination="XUd-EY-5QM" id="RY1-o5-dPv"/>
-                        <outlet property="editDescription" destination="r7O-3f-ruX" id="3gE-ks-J9M"/>
-                        <outlet property="editName" destination="LiX-bW-Gsy" id="4OS-WE-ukV"/>
+                        <outlet property="cameraOnEditAvatar" destination="heS-c6-R7o" id="jkg-ov-53b"/>
+                        <outlet property="editAvatar" destination="XUd-EY-5QM" id="PfL-7O-ZEb"/>
+                        <outlet property="editDescription" destination="r7O-3f-ruX" id="P0t-VQ-ajB"/>
+                        <outlet property="editName" destination="LiX-bW-Gsy" id="Y5o-3l-jme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Wz-fN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

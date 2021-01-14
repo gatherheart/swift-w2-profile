@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class EditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var nameText: String = ""
     var descriptionText: String = ""
     weak var avatar: UIImageView?
@@ -18,13 +18,13 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var cameraOnEditAvatar: UIImageView!
     @IBOutlet weak var editName: UITextField!
     @IBOutlet weak var editDescription: UITextField!
-    
-    public enum UIImagePickerControllerSourceType : Int {
+
+    public enum UIImagePickerControllerSourceType: Int {
         case photoLibrary
         case camera
         case savedPhotosAlbum
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
@@ -43,25 +43,23 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         editName.clearButtonMode = .whileEditing
         editDescription.clearButtonMode = .whileEditing
     }
-    
-    
+
     @IBAction private func pickImage(_ sender: Any) {
         let type = UIImagePickerController.SourceType.photoLibrary
         guard UIImagePickerController.isSourceTypeAvailable(type) else { return }
         imagePickerController.sourceType = type
         present(imagePickerController, animated: true, completion: nil)
     }
-    
+
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true) { }
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             editAvatar.setImage(image, for: .normal)
         }
         dismiss(animated: true, completion: nil)
     }
-    
 
 }

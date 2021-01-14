@@ -8,17 +8,16 @@
 import UIKit
 import Foundation
 
+class FirstViewController: UIViewController {
 
-class FirstViewController: UIViewController{
-    
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editProfileButton: UIButton!
     var toggle: Bool = false
-    
+
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
         self.view.backgroundColor = .gray
         avatar.layer.cornerRadius = avatar.frame.height/3
@@ -32,9 +31,9 @@ class FirstViewController: UIViewController{
         lineView.backgroundColor = .white
         lineView.layer.opacity = 0.25
         editProfileButton.addSubview(lineView)
-        
+
         let imageUrlString = "https://avatars2.githubusercontent.com/u/40990613?s=460&u=931a32905f788ebe3b3dc3f58fc4c4069fbf0cc5&v=4"
-        guard let imageUrl:URL = URL(string: imageUrlString) else {
+        guard let imageUrl: URL = URL(string: imageUrlString) else {
             return
         }
 
@@ -48,8 +47,7 @@ class FirstViewController: UIViewController{
             nameLabel.backgroundColor = .yellow
             nameLabel.alpha = 0.5
             descriptionLabel.text = "크루미션"
-        }
-        else {
+        } else {
             nameLabel.text = "Bean"
             nameLabel.textColor = .white
             descriptionLabel.text = "Carpe diem!"
@@ -58,13 +56,12 @@ class FirstViewController: UIViewController{
             nameLabel.backgroundColor = .none
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LoginViewController {
+        if let destination = segue.destination as? EditViewController {
             destination.nameText = self.nameLabel.text ?? ""
             destination.descriptionText = self.descriptionLabel.text ?? ""
             destination.avatar = self.avatar
         }
     }
 }
-
