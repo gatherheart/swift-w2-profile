@@ -21,7 +21,7 @@
 		5D5CC48F25B00C86002E35B5 /* EditVIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC48E25B00C86002E35B5 /* EditVIewDelegate.swift */; };
 		5D5CC49325B01CF3002E35B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC49225B01CF3002E35B5 /* UIColorExtension.swift */; };
 		5D5CC49625B01D6C002E35B5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC49525B01D6C002E35B5 /* UIViewExtension.swift */; };
-		5D5CC49A25B01DAD002E35B5 /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC49925B01DAD002E35B5 /* UIVIewControllerExtension.swift */; };
+		5D5CC4A825B02021002E35B5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC4A725B02021002E35B5 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		5D5CC48E25B00C86002E35B5 /* EditVIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVIewDelegate.swift; sourceTree = "<group>"; };
 		5D5CC49225B01CF3002E35B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5D5CC49525B01D6C002E35B5 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		5D5CC49925B01DAD002E35B5 /* UIVIewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewControllerExtension.swift; sourceTree = "<group>"; };
+		5D5CC4A725B02021002E35B5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				5D5CC46E25AE8E44002E35B5 /* UIImageViewExtension.swift */,
 				5D5CC49225B01CF3002E35B5 /* UIColorExtension.swift */,
 				5D5CC49525B01D6C002E35B5 /* UIViewExtension.swift */,
-				5D5CC49925B01DAD002E35B5 /* UIVIewControllerExtension.swift */,
+				5D5CC4A725B02021002E35B5 /* UIViewControllerExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 				5D5CC49325B01CF3002E35B5 /* UIColorExtension.swift in Sources */,
 				5D5CC48F25B00C86002E35B5 /* EditVIewDelegate.swift in Sources */,
 				5D5CC44125AC59C9002E35B5 /* AppDelegate.swift in Sources */,
+				5D5CC4A825B02021002E35B5 /* UIViewControllerExtension.swift in Sources */,
 				5D5CC44325AC59C9002E35B5 /* SceneDelegate.swift in Sources */,
-				5D5CC49A25B01DAD002E35B5 /* UIVIewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
