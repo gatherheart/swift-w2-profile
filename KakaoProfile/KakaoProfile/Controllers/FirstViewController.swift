@@ -10,11 +10,12 @@ import Foundation
 
 class FirstViewController: UIViewController {
 
+    var toggle: Bool = false
+
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editProfileButton: UIButton!
-    var toggle: Bool = false
 
     override func viewDidLoad() {
 
@@ -59,9 +60,22 @@ class FirstViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditViewController {
+            destination.delegate = self
             destination.nameText = self.nameLabel.text ?? ""
             destination.descriptionText = self.descriptionLabel.text ?? ""
-            destination.avatar = self.avatar
+            destination.avatarImage = self.avatar.image
         }
     }
+}
+
+extension FirstViewController: EditViewDelegate {
+    func willEditProfile(_ editView: EditViewController, nameLabel: String, descriptionLabel: String, avatar: UIImage?, completion: () -> Void) {
+        self.nameLabel.text = nameLabel
+        self.descriptionLabel.text = descriptionLabel
+        if let image = avatar {
+            self.avatar.image = image
+        }
+        completion()
+    }
+
 }

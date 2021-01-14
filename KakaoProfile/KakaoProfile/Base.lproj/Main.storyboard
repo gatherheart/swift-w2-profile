@@ -100,7 +100,7 @@
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUd-EY-5QM">
                                 <rect key="frame" x="157" y="474" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="LBz-1k-q9t"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="LBz-1k-q9t"/>
                                     <constraint firstAttribute="height" constant="100" id="he2-TW-yw4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -140,6 +140,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="mim-7u-P9x" eventType="touchUpInside" id="iEt-qj-LzM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="프로필" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fom-r1-7Rx">
                                 <rect key="frame" x="180" y="24" width="55" height="26"/>
