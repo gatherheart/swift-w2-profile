@@ -58,6 +58,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             editAvatar.setImage(image, for: .normal)
+            avatar?.image = image
         }
         dismiss(animated: true, completion: nil)
     }

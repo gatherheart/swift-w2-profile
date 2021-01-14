@@ -64,4 +64,12 @@ class FirstViewController: UIViewController {
             destination.avatar = self.avatar
         }
     }
+    func unwindToPresentingViewController(segue: UIStoryboardSegue) {
+        if let destination = segue.destination as? EditViewController {
+            self.nameLabel.text = destination.editName.text
+            self.descriptionLabel.text = destination.editDescription.text
+            self.avatar.image = destination.avatar?.image
+        }
+    }
+
 }
