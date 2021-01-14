@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="320" id="zgB-RG-2Wm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gS5-3i-VzL">
                                 <rect key="frame" x="47" y="508" width="320" height="40"/>
@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="width" constant="320" id="SQw-Fa-neE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-nb-02n">
                                 <rect key="frame" x="172" y="596" width="70" height="40"/>
@@ -52,6 +52,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPressLogin:" destination="y0G-lW-5uq" eventType="touchUpInside" id="2gc-df-Lf0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jhh-M3-oYf"/>
@@ -68,6 +71,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C9M-KI-FXe"/>
+                    <connections>
+                        <outlet property="password" destination="gS5-3i-VzL" id="DU1-No-sUP"/>
+                        <outlet property="userId" destination="mZ0-X3-sYx" id="xbR-zq-jGH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6F-4i-Bf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,5 +8,5 @@
 import UIKit
 
 protocol EditViewDelegate: AnyObject {
-    func willEditProfile(_ editView: EditViewController, nameLabel: String, descriptionLabel: String, avatar: UIImage?, completion: ()->Void)
+    func willEditProfile(_ editView: EditViewController, nameLabel: String, descriptionLabel: String, avatar: UIImage?, completion: () -> Void)
 }
