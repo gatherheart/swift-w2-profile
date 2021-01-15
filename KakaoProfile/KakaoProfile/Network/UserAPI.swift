@@ -7,9 +7,13 @@
 
 import Foundation
 
+protocol UserAPIDelegate: AnyObject {
+    func didVerify(isVerified: Bool)
+}
+
 class UserAPI {
     enum Response: String {
-        case success = "success", failure = "failure"
+        case success, failure
     }
     static weak var delegate: UserAPIDelegate?
 
@@ -37,17 +41,13 @@ class UserAPI {
 
                     let ret = jsonObject["response"] as? String
                     if ret == Response.success.rawValue {
-                        delegate?.didVerification(isVerified: true)
+                        delegate?.didVerify(isVerified: true)
                     }
-                } catch let error as NSError {
-                    print("An error has occured while parsing JSONObject: \(error.localizedDescription)")
+                } catch {
+                    delegate?.didVerify(isVerified: false)
                 }
             }
         }
         task.resume()
     }
-}
-
-protocol UserAPIDelegate: AnyObject {
-    func didVerification(isVerified: Bool)
 }

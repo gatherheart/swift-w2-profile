@@ -60,10 +60,7 @@ class FirstViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditViewController {
-            destination.delegate = self
-            destination.nameText = self.nameLabel.text ?? ""
-            destination.descriptionText = self.descriptionLabel.text ?? ""
-            destination.avatarImage = self.avatar.image
+            destination.changeProfile(self, name: self.nameLabel.text ?? "", descriptionLabel: self.descriptionLabel.text ?? "", avatarImage: self.avatar.image ?? nil)
         }
     }
 }

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.view.backgroundColor = UIColor(rgb: 0xFFE812)
     }
 
@@ -31,10 +32,13 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: UserAPIDelegate {
-    func didVerification(isVerified: Bool) {
+    func didVerify(isVerified: Bool) {
         if isVerified {
-            // to-do go to the webView of daum main home
+            // to-do: go to the webView of daum main home
             print("isVerified", isVerified)
+        } else {
+            // to-do: alert- login failed
+            print("alert")
         }
     }
 

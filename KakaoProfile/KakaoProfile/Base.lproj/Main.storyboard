@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vr6-J3-VPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="765"/>
+            <point key="canvasLocation" x="788" y="765"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="BzN-Tz-K6W">
@@ -251,14 +251,14 @@
                     <navigationItem key="navigationItem" id="Yp0-WS-kxQ"/>
                     <connections>
                         <outlet property="cameraOnEditAvatar" destination="heS-c6-R7o" id="jkg-ov-53b"/>
+                        <outlet property="descriptionTextField" destination="r7O-3f-ruX" id="P0t-VQ-ajB"/>
                         <outlet property="editAvatar" destination="XUd-EY-5QM" id="PfL-7O-ZEb"/>
-                        <outlet property="editDescription" destination="r7O-3f-ruX" id="P0t-VQ-ajB"/>
-                        <outlet property="editName" destination="LiX-bW-Gsy" id="Y5o-3l-jme"/>
+                        <outlet property="name" destination="LiX-bW-Gsy" id="Y5o-3l-jme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-Wz-fN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.7971014492753632" y="85.714285714285708"/>
+            <point key="canvasLocation" x="-74" y="86"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="dVe-yf-XeL">

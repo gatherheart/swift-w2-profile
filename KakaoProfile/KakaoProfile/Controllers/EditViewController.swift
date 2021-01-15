@@ -9,37 +9,55 @@ import Foundation
 import UIKit
 
 class EditViewController: UIViewController {
-    var nameText: String = ""
-    var descriptionText: String = ""
-    weak var avatarImage: UIImage?
-    var tmpAvatarImage: UIImage?
-    weak var delegate: EditViewDelegate?
+    private var nameText: String = ""
+    private var descriptionText: String = ""
+    private weak var avatarImage: UIImage?
+    private var tmpAvatarImage: UIImage?
+    private weak var delegate: EditViewDelegate?
     private let imagePickerController = UIImagePickerController()
 
     @IBOutlet weak var editAvatar: UIButton!
     @IBOutlet weak var cameraOnEditAvatar: UIImageView!
-    @IBOutlet weak var editName: UITextField!
-    @IBOutlet weak var editDescription: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
         if let image: UIImage = avatarImage {
-            editAvatar.setTitle("", for: .normal)
-            editAvatar.layer.cornerRadius = editAvatar.frame.height/3
-            editAvatar.setImage(image, for: .normal)
-            cameraOnEditAvatar.image = UIImage(systemName: "camera.circle.fill")
-            cameraOnEditAvatar.tintColor = .white
-            cameraOnEditAvatar.backgroundColor = .black
-            cameraOnEditAvatar.layer.cornerRadius = cameraOnEditAvatar.frame.height/2
-            cameraOnEditAvatar.layer.borderWidth = 2
-            cameraOnEditAvatar.layer.borderColor = UIColor.white.cgColor
+            configureImage(image: image)
         }
         imagePickerController.delegate = self
-        editName.text = nameText
-        editName.clearButtonMode = .whileEditing
-        editDescription.text = descriptionText
-        editDescription.clearButtonMode = .whileEditing
+        configureText()
+    }
+
+    func configureImage(image: UIImage) {
+        editAvatar.setTitle("", for: .normal)
+        editAvatar.layer.cornerRadius = editAvatar.frame.height/3
+        editAvatar.setImage(image, for: .normal)
+        cameraOnEditAvatar.image = UIImage(systemName: "camera.circle.fill")
+        cameraOnEditAvatar.tintColor = .white
+        cameraOnEditAvatar.backgroundColor = .black
+        cameraOnEditAvatar.layer.cornerRadius = cameraOnEditAvatar.frame.height/2
+        cameraOnEditAvatar.layer.borderWidth = 2
+        cameraOnEditAvatar.layer.borderColor = UIColor.white.cgColor
+    }
+
+    func configureText() {
+        name.clearButtonMode = .whileEditing
+        name.text = nameText
+        descriptionTextField.clearButtonMode = .whileEditing
+        descriptionTextField.text = descriptionText
+    }
+
+    func changeProfile(_ sender: Any, name: String, descriptionLabel: String, avatarImage: UIImage?) {
+        if let delegate = sender as? EditViewDelegate {
+            self.delegate = delegate
+        }
+        self.nameText = name
+        self.descriptionText = descriptionLabel
+        if let image = avatarImage {
+            self.avatarImage = image
+        }
     }
 
     @IBAction func cancel(_ sender: Any) {
@@ -47,7 +65,7 @@ class EditViewController: UIViewController {
     }
 
     @IBAction func done(_ sender: Any) {
-        self.delegate?.willEditProfile(self, nameLabel: self.editName.text ?? "", descriptionLabel: self.editDescription.text ?? "", avatar: self.tmpAvatarImage) {
+        self.delegate?.willEditProfile(self, nameLabel: self.name.text ?? "", descriptionLabel: self.descriptionTextField.text ?? "", avatar: self.tmpAvatarImage) {
             dismiss(animated: true) {}
         }
     }
