@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var userId: UITextField!
     @IBOutlet weak var password: UITextField!
+    let alert = UIAlertController(title: "로그인", message: "실패", preferredStyle: .alert)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,13 @@ class LoginViewController: UIViewController {
             UserAPI.delegate = self
             try UserAPI.login(self, userId: userId?.text ?? "", password: password?.text ?? "")
         } catch {
-            return
+            alertMessage(title: "Login Failed")
         }
+    }
+    
+    private func alertMessage(title: String) {
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -37,8 +43,7 @@ extension LoginViewController: UserAPIDelegate {
             // to-do: go to the webView of daum main home
             print("isVerified", isVerified)
         } else {
-            // to-do: alert- login failed
-            print("alert")
+            alertMessage(title: "ID or Password is wrong")
         }
     }
 

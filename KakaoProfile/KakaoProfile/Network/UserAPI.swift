@@ -30,9 +30,8 @@ class UserAPI {
         request.setValue(String(paramData.count), forHTTPHeaderField: "Content-Length")
 
         let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if let error = error {
-                NSLog("An error has occured: \(error.localizedDescription)")
-                return
+            if error != nil {
+                delegate?.didVerify(isVerified: false)
             }
             DispatchQueue.main.async {
                 do {
@@ -42,6 +41,8 @@ class UserAPI {
                     let ret = jsonObject["response"] as? String
                     if ret == Response.success.rawValue {
                         delegate?.didVerify(isVerified: true)
+                    } else {
+                        delegate?.didVerify(isVerified: false)
                     }
                 } catch {
                     delegate?.didVerify(isVerified: false)

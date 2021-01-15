@@ -6,5 +6,5 @@
 //
 
 struct Config {
-    static let baseURL = "https://witty-swan-67.loca.lt"
+    static let baseURL = "https://silly-earwig-51.loca.lt/"
 }

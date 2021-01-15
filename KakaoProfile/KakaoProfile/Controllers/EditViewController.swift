@@ -30,7 +30,7 @@ class EditViewController: UIViewController {
         configureText()
     }
 
-    func configureImage(image: UIImage) {
+    private func configureImage(image: UIImage) {
         editAvatar.setTitle("", for: .normal)
         editAvatar.layer.cornerRadius = editAvatar.frame.height/3
         editAvatar.setImage(image, for: .normal)
@@ -42,7 +42,7 @@ class EditViewController: UIViewController {
         cameraOnEditAvatar.layer.borderColor = UIColor.white.cgColor
     }
 
-    func configureText() {
+    private func configureText() {
         name.clearButtonMode = .whileEditing
         name.text = nameText
         descriptionTextField.clearButtonMode = .whileEditing
