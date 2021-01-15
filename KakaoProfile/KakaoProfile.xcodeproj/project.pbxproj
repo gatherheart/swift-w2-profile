@@ -25,6 +25,8 @@
 		5D5CC4B925B041DD002E35B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC4B825B041DD002E35B5 /* User.swift */; };
 		5D5CC4BE25B051DB002E35B5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC4BD25B051DB002E35B5 /* Config.swift */; };
 		5D5CC4C225B051EB002E35B5 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC4C125B051EB002E35B5 /* UserAPI.swift */; };
+		5D5CC4CB25B151FF002E35B5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CC4CA25B151FF002E35B5 /* WebKit.framework */; };
+		5D5CC4CD25B15290002E35B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CC4CC25B15290002E35B5 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5D5CC4B825B041DD002E35B5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D5CC4BD25B051DB002E35B5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5D5CC4C125B051EB002E35B5 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		5D5CC4CA25B151FF002E35B5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5D5CC4CC25B15290002E35B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5CC4CB25B151FF002E35B5 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,7 @@
 			children = (
 				5D5CC43F25AC59C9002E35B5 /* KakaoProfile */,
 				5D5CC43E25AC59C9002E35B5 /* Products */,
+				5D5CC4C925B151FF002E35B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +137,7 @@
 				5D5CC47625AEA270002E35B5 /* EditViewController.swift */,
 				5D5CC45C25AD85A5002E35B5 /* TabBarController.swift */,
 				5D5CC48E25B00C86002E35B5 /* EditVIewDelegate.swift */,
+				5D5CC4CC25B15290002E35B5 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +164,14 @@
 				5D5CC4C125B051EB002E35B5 /* UserAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5D5CC4C925B151FF002E35B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D5CC4CA25B151FF002E35B5 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5CC47725AEA270002E35B5 /* EditViewController.swift in Sources */,
+				5D5CC4CD25B15290002E35B5 /* MainViewController.swift in Sources */,
 				5D5CC46825AD91D3002E35B5 /* LoginViewController.swift in Sources */,
 				5D5CC46525AD8D78002E35B5 /* FirstViewController.swift in Sources */,
 				5D5CC45D25AD85A5002E35B5 /* TabBarController.swift in Sources */,
